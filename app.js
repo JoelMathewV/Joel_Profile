@@ -1,7 +1,7 @@
 const sections = document.querySelectorAll(".section");
 const sectBtns = document.querySelectorAll(".controlls");
 const sectBtn = document.querySelectorAll(".control");
-const allSections = document.querySelectorAll(".main-content");
+const allSections = document.querySelector(".main-content");
 
 function pageTransition(){
     for(let i=0; i< sectBtn.length; i++){
@@ -17,14 +17,14 @@ function pageTransition(){
         const id = e.target.dataset.id;
         if(id){
             sectBtns.forEach((btn) => {
-                btn.classList.remove(" active")
+                btn.classList.remove("active")
             })
-            e.target.classList.add(" active");
+            e.target.classList.add("active");
             sections.forEach((section) =>{
-                section.classList.remove(" active")
+                section.classList.remove("active")
             })
             const element = document.getElementById(id);
-            element.classList.add(" active");
+            element.classList.add("active");
         }
     })
 }
